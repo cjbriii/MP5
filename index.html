@@ -26,7 +26,7 @@
 
             let input = document.getElementById("arrayValues").value;
 
-            let numbers = input.split(",");
+            let numbers = input.replace(/,/g, " ").trim().split(/\s+/);
 
             for (let i = 0; i < numbers.length; i++) {
                 numbers[i] = Number(numbers[i].trim());
